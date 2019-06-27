@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Wakanda Zoo App</string>
+    <string name="wakanda_national_zoo">Wakanda National Zoo</string>
+    <string name="click_here_to_explore_the_zoo">Click here to explore the Zoo</string>
+    <string name="play_sound">Play Sound</string>
+</resources>
