@@ -18,7 +18,7 @@ public class AnimalsPerCategoryAdapter extends RecyclerView.Adapter<AnimalsPerCa
     ArrayList<Animal> animalsArrayList;
     Context context;
 
-    public AnimalsPerCategoryAdapter(ArrayList<Animal> animalsArrayList,Context context) {
+    public AnimalsPerCategoryAdapter(ArrayList<Animal> animalsArrayList, Context context) {
         this.animalsArrayList = animalsArrayList;
         this.context = context;
     }

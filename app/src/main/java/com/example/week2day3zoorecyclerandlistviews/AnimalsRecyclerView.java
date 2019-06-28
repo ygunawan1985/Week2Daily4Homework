@@ -14,7 +14,7 @@ public class AnimalsRecyclerView extends AppCompatActivity {
 
     RecyclerView rvRecyclerView;
     ArrayList<Animal> animals;
-    ArrayList<Animal> resultAnimals;
+    //ArrayList<Animal> resultAnimals;
     String categoryValue;
 
     @Override
@@ -26,19 +26,19 @@ public class AnimalsRecyclerView extends AppCompatActivity {
         Intent receivedIntent = getIntent();
         Bundle receivedBundle = receivedIntent.getExtras();
         if(receivedBundle != null) {
-            categoryValue = receivedBundle.getString("categoryValue");
+            //categoryValue = receivedBundle.getString("categoryValue");
             animals = receivedBundle.getParcelableArrayList("animals");
-            resultAnimals = new ArrayList<>();
-
-            for(Animal animal : animals){
-                if(animal.getCategory().equalsIgnoreCase(categoryValue)){
-                    resultAnimals.add(animal);
-                }
-            }
+//            resultAnimals = new ArrayList<>();
+//
+//            for(Animal animal : animals){
+//                if(animal.getCategory().equalsIgnoreCase(categoryValue)){
+//                    resultAnimals.add(animal);
+//                }
+//            }
         }
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        AnimalsPerCategoryAdapter animalsPerCategoryAdapter = new AnimalsPerCategoryAdapter(resultAnimals,this);
+        AnimalsPerCategoryAdapter animalsPerCategoryAdapter = new AnimalsPerCategoryAdapter(animals,this);
         rvRecyclerView.setLayoutManager(layoutManager);
         rvRecyclerView.setAdapter(animalsPerCategoryAdapter);
 
